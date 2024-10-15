@@ -30,3 +30,9 @@ def test_add_with_multiple_delimiter():
 def test_add_with_multiple_delimiter_v1():
     calc = Calculator()
     assert calc.calculate("//;\n1;2", delimiter=["\n", ";", "//"]) == 3
+
+
+def test_negative_numbers_not_allowed():
+    calc = Calculator()
+    assert calc.calculate("1,-2,3") == "Negative numbers not allowed: [-2]"
+

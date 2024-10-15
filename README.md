@@ -6,6 +6,8 @@ This python code implements a String Calculator that takes a string of numbers a
 
 - **Addition**: Adds numbers in the string.
 - **Custom Delimiters**: Supports passing custom delimiters as arguments (both single and multiple).
+- **Negative Numbers Handling**: Raises an exception and returns an error message when negative numbers are encountered.
+
 
 ## Installation
 
@@ -31,6 +33,10 @@ You can use the calculator to perform operations on a string of numbers, either 
 
     # Custom multiple delimiters
     result = calc.calculate("1;2&3", "add", delimiter=[";", "&"]) # output: 6
+   
+   # Handling negative numbers
+   result = calc.calculate("1,-2,3")
+   print(result)  # Output: "Negative numbers not allowed:[-2]"
 
 
 4. Running Tests
