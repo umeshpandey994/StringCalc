@@ -1,4 +1,5 @@
 from operations.add_operation import AddOperation
+from operations.parser import StringParser
 
 
 class Calculator:
@@ -11,19 +12,22 @@ class Calculator:
         }
 
     def calculate(
-            self, input_string: str, operation_type: str = "add"
+            self, input_string: str, operation_type: str = "add",
+            delimiter: list = ","
     ):
         """
             This function will do the Arithmetic operations
             :param input_string: Input string
             :param operation_type: add, subtract, multiple default value is add
+            :param delimiter: list of delimiters
             :return: Int or ValueError
         """
         if not input_string:
             return 0
 
         try:
-            numbers = [int(_) for _ in input_string.strip().split(",")]
+            # Parse the string
+            numbers = StringParser.parse_string(input_string, delimiter)
         except ValueError as e:
             return str(e)
 
