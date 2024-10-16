@@ -35,8 +35,8 @@ You can use the calculator to perform operations on a string of numbers, either 
     result = calc.calculate("1;2&3", "add", delimiter=[";", "&"]) # output: 6
    
    # Handling negative numbers
-   result = calc.calculate("1,-2,3")
-   print(result)  # Output: "Negative numbers not allowed:[-2]"
+   result = calc.calculate("1,-2,3,-4")
+   print(result)  # Output: "Negative numbers not allowed: -2, -4"
 
 
 4. Running Tests
