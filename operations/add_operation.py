@@ -7,5 +7,5 @@ class AddOperation(Operation):
         # Storing a list to return the negative values
         negative_numbers = [num for num in numbers if num < 0]
         if negative_numbers:
-            return f"Negative numbers not allowed: {negative_numbers}"
+            return f"Negative numbers not allowed: {', '.join(map(str, negative_numbers))}"
         return sum(numbers)
