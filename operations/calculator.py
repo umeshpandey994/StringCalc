@@ -1,4 +1,5 @@
 from operations.add_operation import AddOperation
+from operations.mul_operation import MulOperation
 from operations.parser import StringParser
 
 
@@ -8,7 +9,8 @@ class Calculator:
     """
     def __init__(self):
         self.operations = {
-            'add': AddOperation()
+            "add": AddOperation(),
+            "mul": MulOperation(),
         }
 
     def calculate(

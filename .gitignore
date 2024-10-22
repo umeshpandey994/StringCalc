@@ -2,3 +2,4 @@
 .idea/
 *.iml
 *.iws
+**/__pycache__/*
