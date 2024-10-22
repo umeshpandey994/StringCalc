@@ -28,8 +28,11 @@ class Calculator:
             return 0
 
         try:
-            # Parse the string
             numbers = StringParser.parse_string(input_string, delimiter)
+            negative_numbers = [num for num in numbers if num < 0]
+            if negative_numbers:
+                return f"Negative numbers not allowed: {', '.join(map(str, negative_numbers))}"
+
         except ValueError as e:
             return str(e)
 
